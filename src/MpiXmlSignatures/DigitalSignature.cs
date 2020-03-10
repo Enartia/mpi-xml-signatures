@@ -32,7 +32,9 @@ namespace MpiXmlSignatures
             keyInfo.AddClause(new KeyInfoX509Data(cert));
 
             RSA privateKeyProvider = cert.GetRSAPrivateKey();
+            //load xml to SignedXml object
             SignedXml signedXml = new CustomIdSignedXml(doc);
+            //set signing params
             signedXml.SignedInfo.CanonicalizationMethod = SignedXml.XmlDsigC14NTransformUrl;
             signedXml.SignedInfo.SignatureMethod = this.SignatureMethod;
             signedXml.SigningKey = privateKeyProvider;
@@ -40,23 +42,30 @@ namespace MpiXmlSignatures
             {
                 DigestMethod = this.DigestMethod
             };
+            //set namespaxes
             XmlNamespaceManager nsmgr = new XmlNamespaceManager(doc.NameTable);
             nsmgr.AddNamespace("ns", ns);
             nsmgr.AddNamespace("ns2", this.ns2);
-            //TODO make Message variable
+            //select message node for signing
             reference.Uri = "#" + doc.SelectSingleNode("//ns:"+this.MessageElementName, nsmgr).Attributes[CustomIdSignedXml.idAttr].Value;
             XmlDsigEnvelopedSignatureTransform env = new XmlDsigEnvelopedSignatureTransform();
             signedXml.AddReference(reference);
-
+            //set signing key and sign xml data
             signedXml.KeyInfo = keyInfo;
             signedXml.ComputeSignature();
+            //get signature
             XmlElement xmlDigitalSignature = signedXml.GetXml();
+            //assign ds prefix
             AssignNameSpacePrefixToElementTree(xmlDigitalSignature, this.CustomPrefix);
+            //load SignedInfo and compute final signature based on correct SignedInfo
             signedXml.LoadXml(xmlDigitalSignature);
             signedXml.SignedInfo.References.Clear();
             signedXml.ComputeSignature();
+            //convert to base64
             string recomputedSignature = Convert.ToBase64String(signedXml.SignatureValue);
+            //replace it 
             ReplaceSignature(xmlDigitalSignature, recomputedSignature);
+            //append it to xml doc
             doc.DocumentElement.AppendChild(doc.ImportNode(xmlDigitalSignature, true));
             using (StringWriter sw = new StringWriter())
             {
