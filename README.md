@@ -15,7 +15,7 @@ Navigate to tests folder and run dotnet test for each project.
 
 ## Authors
 
-* **George Georgopoulos** - *Initial work* - [Enartia](https://github.com/Enartia)
+* **George Georgopoulos** - [Enartia](https://github.com/Enartia)
 
 ## License
 
