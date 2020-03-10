@@ -9,6 +9,16 @@ Runs on C# .NET Core 3.1
 
 tba
 
+### Usage
+
+```
+DigitalSignature digitalSignature = new DigitalSignature();
+XmlDocument doc = new XmlDocument();
+doc.LoadXml(inputXML);           
+var cert = new X509Certificate2(<signing key path>, <signing key password>);
+var result = digitalSignature.SignXmlFile(doc, cert, "http://www.modirum.com/schemas/vposxmlapi41");
+```            
+
 ## Running the tests
 
 Navigate to tests folder and run dotnet test for each project.
