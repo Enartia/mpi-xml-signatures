@@ -11,7 +11,7 @@ tba
 
 ## Running the tests
 
-Navigatre to tests folder and run dotnet test for each project.
+Navigate to tests folder and run dotnet test for each project.
 
 ## Authors
 
