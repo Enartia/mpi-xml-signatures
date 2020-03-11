@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enartia.MpiXmlSignature", "src\Enartia.MpiXmlSignature\Enartia.MpiXmlSignature.csproj", "{DB73DD4D-4B97-40A2-B9CF-487DF1727828}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{AAC3DE13-206C-49C4-BB97-8FE2D387E60B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{BC29AD51-5835-4857-8191-3E6EFFD5D519}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enartia.MpiXmlSignature.Tests", "tests\Enartia.MpiXmlSignature.Tests\Enartia.MpiXmlSignature.Tests.csproj", "{4DBC18D2-0F6B-4227-888A-8E4D74BF68E6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3A0AC6B2-9976-4D93-9143-497FEF448EEA}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE.md = LICENSE.md
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB73DD4D-4B97-40A2-B9CF-487DF1727828}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB73DD4D-4B97-40A2-B9CF-487DF1727828}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB73DD4D-4B97-40A2-B9CF-487DF1727828}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB73DD4D-4B97-40A2-B9CF-487DF1727828}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DBC18D2-0F6B-4227-888A-8E4D74BF68E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DBC18D2-0F6B-4227-888A-8E4D74BF68E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DBC18D2-0F6B-4227-888A-8E4D74BF68E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DBC18D2-0F6B-4227-888A-8E4D74BF68E6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DB73DD4D-4B97-40A2-B9CF-487DF1727828} = {AAC3DE13-206C-49C4-BB97-8FE2D387E60B}
+		{4DBC18D2-0F6B-4227-888A-8E4D74BF68E6} = {BC29AD51-5835-4857-8191-3E6EFFD5D519}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B8C65054-9541-42B9-B16F-AD12B73F3C3E}
+	EndGlobalSection
+EndGlobal

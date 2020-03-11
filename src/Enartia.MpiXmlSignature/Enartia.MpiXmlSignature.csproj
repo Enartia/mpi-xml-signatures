@@ -1,14 +1,20 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <Id>Enartia.MpiXmlSignature</Id>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <RootNamespace>MpiXmlSignatures</RootNamespace>
-    <PackageId>EnartiaMpiDigitalSigning</PackageId>
+    <RootNamespace>Enartia.MpiXmlSignature</RootNamespace>
+    <PackageId>Enartia.MpiDigitalSigning</PackageId>
+    <AssemblyName>Enartia.MpiXmlSignature</AssemblyName>
     <Title>Enartia Mpi Digital Signing</Title>
     <PackageDescription>Library used for MPI specific xml signature generation and validation</PackageDescription>
-  <Version>1.0.0</Version>
-  <Authors>ggeorgop</Authors>
-  <Company>Enartia</Company>
+    <Version>1.0.0</Version>
+    <Authors>Enartia</Authors>
+    <Company>Enartia</Company>
+    <Owners>Enartia</Owners>
+    <RequireLicenseAcceptance>false</RequireLicenseAcceptance>
+    <ProjectUrl>https://github.com/Enartia/mpi-xml-signatures</ProjectUrl>
+    <Description>XML digital signing library, adhering to ModirumMPI specifications.</Description>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="System.Security.Cryptography.Cng" Version="4.6.0" />
