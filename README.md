@@ -3,29 +3,29 @@ XML digital signing library, adhering to ModirumMPI specifications.
 
 ### Prerequisites
 
-Runs on C# .NET Core 3.1
-
-### Installing
-
-tba
+Requires .NET Core 3.1
 
 ### Usage
 
+#### Create
 ```
-DigitalSignature digitalSignature = new DigitalSignature();
-XmlDocument doc = new XmlDocument();
-doc.LoadXml(inputXML);           
-var cert = new X509Certificate2(<signing key path>, <signing key password>);
-var result = digitalSignature.SignXmlFile(doc, cert, "http://www.modirum.com/schemas/vposxmlapi41");
+var digitalSignature = new DigitalSignature();
+var result = digitalSignature.SignXmlFile(xmlDocument, certificate, xmlSignatureSyntax);
 ```            
+#### Verify
+
+```
+var digitalSignature = new DigitalSignature();
+var result = digitalSignature.VerifyXmlFile(xmlDocument);
+``` 
 
 ## Running the tests
 
-Navigate to tests folder and run dotnet test for each project.
+Navigate to tests folder and run dotnet test.
 
-## Authors
+## Author
 
-* **George Georgopoulos** - [Enartia](https://github.com/Enartia)
+[Enartia](https://github.com/Enartia)
 
 ## License
 
