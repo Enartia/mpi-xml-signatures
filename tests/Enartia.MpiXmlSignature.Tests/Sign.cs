@@ -5,7 +5,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Xml;
 using Xunit;
 
-namespace MpiXmlSignatures.Tests
+namespace Enartia.MpiXmlSignatures.Tests
 {
     public sealed class Sign
     {
